@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+:root {
+  /* Day / Light Theme colors */
+  --color-brand-primary: #0284c7; /* Sky 600 - deep and highly visible on light surface */
+  --color-brand-secondary: #0369a1; /* Sky 700 */
+  --color-brand-tertiary: #7c3aed; /* Violet 600 */
+  --color-brand-background: #f8fafc; /* Slate 50 */
+  --color-brand-surface: #ffffff; /* White */
+  --color-brand-surface-container: #f1f5f9; /* Slate 100 */
+  --color-brand-surface-variant: #e2e8f0; /* Slate 200 */
+  --color-brand-on-surface: #0f172a; /* Slate 900 */
+  --color-brand-on-surface-variant: #475569; /* Slate 600 */
+  --color-brand-outline-variant: #cbd5e1; /* Slate 300 */
+  --color-brand-error: #e11d48; /* Rose 600 */
+  
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(2, 132, 199, 0.15);
+  --glass-shadow: 0 8px 32px 0 rgba(15, 23, 42, 0.08);
+}
+
+.dark {
+  /* Night / Dark Theme colors */
+  --color-brand-primary: #7dd3fc; /* Sky 300 */
+  --color-brand-secondary: #88b4cc;
+  --color-brand-tertiary: #c8a0f0;
+  --color-brand-background: #0a0e1a;
+  --color-brand-surface: #0f1524;
+  --color-brand-surface-container: #141c2e;
+  --color-brand-surface-variant: #1a2438;
+  --color-brand-on-surface: #e0e8f0;
+  --color-brand-on-surface-variant: #a0b4c4;
+  --color-brand-outline-variant: #2a3a48;
+  --color-brand-error: #ff6b6b;
+  
+  --glass-bg: rgba(15, 21, 36, 0.6);
+  --glass-border: rgba(125, 211, 252, 0.1);
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-brand-primary: var(--color-brand-primary);
+  --color-brand-secondary: var(--color-brand-secondary);
+  --color-brand-tertiary: var(--color-brand-tertiary);
+  --color-brand-background: var(--color-brand-background);
+  --color-brand-surface: var(--color-brand-surface);
+  --color-brand-surface-container: var(--color-brand-surface-container);
+  --color-brand-surface-variant: var(--color-brand-surface-variant);
+  --color-brand-on-surface: var(--color-brand-on-surface);
+  --color-brand-on-surface-variant: var(--color-brand-on-surface-variant);
+  --color-brand-outline-variant: var(--color-brand-outline-variant);
+  --color-brand-error: var(--color-brand-error);
+}
+
+@utility glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border);
+}
+
+@utility glass-elevated {
+  background: var(--glass-bg);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+}
+
+@utility glow-effect {
+  transition: all 0.3s ease;
+}
+
+@utility glow-effect-hover {
+  &:hover {
+    box-shadow: 0 0 20px rgba(125, 211, 252, 0.2);
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Glacier Finance",
+  "description": "A beautiful, premium personal finance tracker featuring real-time interactive charts, transaction logging, and financial reports using glassmorphism designs.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
